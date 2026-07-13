@@ -13,5 +13,7 @@ public interface LeadRepository extends JpaRepository<Lead, UUID> {
 
 	Optional<Lead> findFirstByClienteIdAndConversaIdOrderByCriadoEmDesc(UUID clienteId, UUID conversaId);
 
+	Optional<Lead> findFirstByClienteIdAndConversaId(UUID clienteId, UUID conversaId);
+
 	List<Lead> findByStatus(StatusLead status);
 }
